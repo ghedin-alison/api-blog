@@ -14,3 +14,11 @@ Essas configurações evitam erro nos comandos abaixo.
 ## Comandos
     - dotnet ef migrations add CreateDatabase
     - dotnet ef database update
+
+# Program.cs
+Para trabalhar con MVC adicionar
+- builder.Services.AddControllers();
+- builder.Services.AddDbContext\<BlogDataContext>();
+Substituir:
+- app.MapGet("/", () => "Hello World!"); por:
+- app.MapControllers();
